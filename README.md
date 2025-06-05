@@ -11,19 +11,15 @@ model.py              - ONNX model loader, image preprocessor, and prediction lo
 convert_to_onnx.py    - Converts the PyTorch model to ONNX  
 test.py               - Tests the ONNX model locally with image input  
 requirements.txt      - Python dependencies  
-model.onnx            - The converted ONNX model (after conversion)  
-README.txt            - Project documentation  
 
 
 Getting Started
 ---------------
 1. Clone the Repository
------------------------
 git clone [https://github.com/SurbhiGurjar2003/coder_byte.git]
 
-
+-----------------------
 2. Install Dependencies
-------------------------
 (Optional) Create virtual environment:
 python -m venv venv  
 source venv/bin/activate  # On Windows: venv\Scripts\activate  
@@ -31,16 +27,14 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 Install required packages:
 pip install -r requirements.txt  
 
-
-3. Convert PyTorch Model to ONNX
 --------------------------------
+3. Convert PyTorch Model to ONNX
 python convert_to_onnx.py
 
 This generates `model.onnx` from a pretrained ResNet-18 model.
 
-
-4. Test ONNX Inference
 ----------------------
+4. Test ONNX Inference
 python test.py --img_path ./sample_image.jpg
 
 This will load the ONNX model and print the predicted class index for the input image.
